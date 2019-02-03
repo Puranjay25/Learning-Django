@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Signup Here
+{% endblock %}
+
+{% block body %}
+	<form method="post">
+		{% csrf_token %}
+		{{form.as_p}}
+		<br><button class="btn" type="submit">Register</button>
+	</form>
+{% endblock %}

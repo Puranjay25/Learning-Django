@@ -1,7 +1,7 @@
 from django.db import models
 
-# Cmreate your models here.
-class first(models.Model):
+# Create your models here.
+class adminmodel(models.Model):
 	name=models.TextField()
 
 	def __str__(self):
