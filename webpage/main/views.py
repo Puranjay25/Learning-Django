@@ -8,3 +8,6 @@ def home(request):
 def signup(request):
 	form=UserCreationForm
 	return render(request,"signup.html",context={"form":form})
+
+def wrongsignup(request,number):
+	return HttpResponse("Oops!..Somethong went wrong")
