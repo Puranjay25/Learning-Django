@@ -16,4 +16,4 @@ def signup(request):
 	return render(request,"signup.html",context={"form":form})
 
 def wrongsignup(request,number):
-	return HttpResponse("Oops!..Somethong went wrong")
+	return HttpResponse("Oops!..Somethong went wrong! Error 404")
