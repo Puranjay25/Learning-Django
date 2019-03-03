@@ -8,6 +8,6 @@ def index(request):
 		form=userform(request.POST)
 		if form.is_valid():
 			form.save()
-			return render(request=request,template_name="main.html")
+		return render(request=request,template_name="main.html")
 
 	return render(request=request,template_name="main.html")

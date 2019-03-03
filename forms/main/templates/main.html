@@ -10,7 +10,7 @@
 	</head>
 	<body>
 		<div class="container">
-  			<form action="{% url 'main:index' %}" method="post">
+  			<form method="post">
   				{% csrf_token %}
    				<div class="form-group">
 	      			<label for="name">Name</label>
@@ -18,15 +18,15 @@
     			</div>
     			<div class="form-group">
 	      			<label for="username">Username</label>
-	     			<input type="text" class="form-control" id="uname" placeholder="Enter user name" name="uname">
+	     			<input type="text" class="form-control" id="uname" placeholder="Enter user name" name="username">
     			</div>
     			<div class="form-group">
 				    <label for="pwd">Password:</label>
-				    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+				    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password">
     			</div>
     			<div class="form-group">
 				    <label for="pwd">Confirm Password:</label>
-				    <input type="password" class="form-control" id="cpwd" placeholder="Re-Enter password" name="cpwd">
+				    <input type="password" class="form-control" id="cpwd" placeholder="Re-Enter password" name="confirm_pass">
     			</div>
     			<button type="submit" class="btn btn-default">Submit</button>
   			</form>
