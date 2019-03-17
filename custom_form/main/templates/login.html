@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<title>Login</title>
+</head>
+<body>
+	<form method="post">
+		{% csrf_token %}
+
+     		  <div class="row">
+        		<div class="input-field col s12">
+          			<input name="username" type="text" class="validate" required>
+          			<label for="username">Username</label>
+        		</div>
+      		</div>
+
+      		<div class="row">
+        		<div class="input-field col s12">
+          			<input name="password" type="password" class="validate" required>
+          			<label for="password">Password</label>
+        		</div>
+      		</div>
+
+      		<button class="btn waves-effect waves-light" type="submit" name="action">Submit</button><br>
+      		{% if request.POST %}
+      			{{error}}
+      		{% endif %}
+
+      		<br>Not yet registered? <a href="/signup/">Signup Here</a>
+  
+  	</form>
+</body>
+</html>

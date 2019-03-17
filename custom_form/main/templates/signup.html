@@ -12,45 +12,49 @@
 		<div class="row">
       		<div class="row">
         		<div class="input-field col s6">
-          			<input placeholder="Placeholder" name="first_name" type="text" class="validate">
+          			<input placeholder="Placeholder" name="first_name" type="text" class="validate" required>
           			<label for="first_name">First Name</label>
         		</div>
        			<div class="input-field col s6">
-			        <input name="last_name" type="text" class="validate">
+			        <input name="last_name" type="text" class="validate" required>
 			        <label for="last_name">Last Name</label>
         		</div>
      		</div>
 
      		<div class="row">
         		<div class="input-field col s12">
-          			<input name="username" type="text" class="validate">
+          			<input name="username" type="text" class="validate" required>
           			<label for="username">Username</label>
         		</div>
       		</div>
 
      		<div class="row">
         		<div class="input-field col s12">
-          			<input name="email" type="email" class="validate">
+          			<input name="email" type="email" class="validate" required>
           			<label for="email">Email</label>
         		</div>
       		</div>
 
       		<div class="row">
         		<div class="input-field col s12">
-          			<input name="password" type="password" class="validate">
+          			<input name="password" type="password" class="validate" required>
           			<label for="password">Password</label>
         		</div>
       		</div>
 
       		<div class="row">
         		<div class="input-field col s12">
-          			<input name="confirm_password" type="password" class="validate">
+          			<input name="confirm_password" type="password" class="validate" required>
           			<label for="confrm-password">Confirm-Password</label>
         		</div>
       		</div>
 
-      		<button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+      		<button class="btn waves-effect waves-light" type="submit" name="action">Submit</button><br>
+      		{% if request.POST %}
+      			{{error}}
+      		{% endif %}
 
+      		<br>Already registered? <a href="/login/">Login Here</a>
   		</div>
   	</form>
 </body>
