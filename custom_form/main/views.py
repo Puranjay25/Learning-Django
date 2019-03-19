@@ -34,7 +34,9 @@ def login(request):
 		for t1 in t:
 			if t1.username==username:
 				if t1.password==password:
-					return render(request,"dashboard.html")
+					request.session['username']=username
+					u=request.session['username']
+					return render(request,"dashboard.html",context={"u":u})
 				else:
 					error="Password do not match"
 					return render(request,"login.html",context={"error":error})
