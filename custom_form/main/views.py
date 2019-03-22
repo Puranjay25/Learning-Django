@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.core.mail import send_mail
 from django.http import HttpResponse
 from .models import user
 from django.core import serializers
@@ -18,6 +19,7 @@ def signup(request):
 		if password==confirm_password:
 			t=user.objects.get_or_create(first_name=first_name,last_name=last_name,username=username,email=email,password=password,confirm_password=confirm_password)
 			t[0].save()
+			send_mail('Welcome!!','Welcome to The App community','your_email_id',[email],fail_silently=False)
 		else:
 			error="Password And Confirm Password do not match"
 			return render(request,"signup.html",context={"error":error})
