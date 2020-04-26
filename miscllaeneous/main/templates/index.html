@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello world</title>
+</head>
+<body>
+	<p>Hello World</p>
+	<a href="next/">Click Here</a> to go to next page
+	<p>
+		<center>
+			<h1><strong>LOGIN FORM</strong></h1>
+			<form method="post">
+				{% csrf_token %}
+				{{form.as_p}}
+				<button type="submit">Click Here</button>
+			</form>
+		</center>
+	</p>
+</body>
+</html>
